@@ -1,0 +1,43 @@
+/* django_fancy_reports/templates/django_fancy_reports/css/direction.css */
+
+body {
+  direction: {{ text_direction }};
+}
+
+{% if is_rtl %}
+/* RTL-specific styles */
+
+.report-header {
+  flex-direction: row-reverse;
+}
+
+.report-header-left {
+  text-align: right;
+}
+
+.report-meta {
+  text-align: left !important;
+}
+
+.report-totals {
+  float: left !important;
+}
+
+.report-bank-info {
+  text-align: left !important;
+}
+
+th,
+td {
+  text-align: right;
+}
+
+.text-right {
+  text-align: left !important;
+}
+
+.text-left {
+  text-align: right !important;
+}
+
+{% endif %}

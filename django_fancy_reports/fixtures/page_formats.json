@@ -1,0 +1,92 @@
+[
+    {
+        "model": "django_fancy_reports.reportpageformat",
+        "pk": 1,
+        "fields": {
+            "name": "A4 Portrait",
+            "width": "210.00",
+            "height": "297.00",
+            "orientation": "portrait",
+            "margin_top": "20.00",
+            "margin_bottom": "20.00",
+            "margin_left": "20.00",
+            "margin_right": "20.00",
+            "is_default": true
+        }
+    },
+    {
+        "model": "django_fancy_reports.reportpageformat",
+        "pk": 2,
+        "fields": {
+            "name": "A4 Landscape",
+            "width": "297.00",
+            "height": "210.00",
+            "orientation": "landscape",
+            "margin_top": "20.00",
+            "margin_bottom": "20.00",
+            "margin_left": "20.00",
+            "margin_right": "20.00",
+            "is_default": false
+        }
+    },
+    {
+        "model": "django_fancy_reports.reportpageformat",
+        "pk": 3,
+        "fields": {
+            "name": "Letter Portrait",
+            "width": "215.90",
+            "height": "279.40",
+            "orientation": "portrait",
+            "margin_top": "25.40",
+            "margin_bottom": "25.40",
+            "margin_left": "25.40",
+            "margin_right": "25.40",
+            "is_default": false
+        }
+    },
+    {
+        "model": "django_fancy_reports.reportpageformat",
+        "pk": 4,
+        "fields": {
+            "name": "Letter Landscape",
+            "width": "279.40",
+            "height": "215.90",
+            "orientation": "landscape",
+            "margin_top": "25.40",
+            "margin_bottom": "25.40",
+            "margin_left": "25.40",
+            "margin_right": "25.40",
+            "is_default": false
+        }
+    },
+    {
+        "model": "django_fancy_reports.reportpageformat",
+        "pk": 5,
+        "fields": {
+            "name": "A3 Portrait",
+            "width": "297.00",
+            "height": "420.00",
+            "orientation": "portrait",
+            "margin_top": "20.00",
+            "margin_bottom": "20.00",
+            "margin_left": "20.00",
+            "margin_right": "20.00",
+            "is_default": false
+        }
+    },
+    {
+        "model": "django_fancy_reports.reportpageformat",
+        "pk": 6,
+        "fields": {
+            "name": "A3 Landscape",
+            "width": "420.00",
+            "height": "297.00",
+            "orientation": "landscape",
+            "margin_top": "20.00",
+            "margin_bottom": "20.00",
+            "margin_left": "20.00",
+            "margin_right": "20.00",
+            "is_default": false
+        }
+    }
+]

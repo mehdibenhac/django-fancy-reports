@@ -1,0 +1,62 @@
+<!-- django_fancy_reports/templates/django_fancy_reports/base_report.html -->
+<!DOCTYPE html>
+<html lang="{{ text_direction }}" dir="{{ text_direction }}">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{{ report.display_name }}{% endblock %}</title>
+  <style>
+    /* Inject all compiled stylesheets */
+    {% for stylesheet in stylesheets %}
+    {{ stylesheet|safe }}
+    {% endfor %}
+  </style>
+</head>
+<body>
+  {% block header %}
+  <div class="report-header">
+    <div class="report-header-left">
+      {% block logo %}
+      <!-- Override this block to add a logo -->
+      {% endblock %}
+
+      {% block company_info %}
+      <div class="report-company-info">
+        <strong>Company Name</strong><br>
+        Address
+      </div>
+      {% endblock %}
+    </div>
+
+    <div class="report-meta">
+      {% block report_title %}
+      <div class="report-title">{{ report.display_name }}</div>
+      {% endblock %}
+
+      {% block metadata %}
+      <!-- Override this block to add metadata (invoice number, dates, etc.) -->
+      {% endblock %}
+    </div>
+  </div>
+  {% endblock %}
+
+  {% block recipient %}
+  <!-- Override this block to add recipient information -->
+  {% endblock %}
+
+  {% block content %}
+  <!-- Main report content goes here -->
+  {% endblock %}
+
+  {% block totals %}
+  <!-- Override this block to add totals/summary -->
+  {% endblock %}
+
+  {% block notes %}
+  <!-- Override this block to add notes -->
+  {% endblock %}
+
+  {% block footer %}
+  <!-- Override this block to add footer information -->
+  {% endblock %}
+</body>
+</html>

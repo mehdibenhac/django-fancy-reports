@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-fancy-reports"
+version = "0.1.0"
+description = "A customizable and extensible reporting framework for Django"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Mehdi Benhac", email = "mehdi@benhac.com"}
+]
+
+dependencies = [
+    "Django>=4.2",
+]
+
+[project.optional-dependencies]
+pdf = ["weasyprint>=60.0"]
+text = ["html2text>=2020.1.16"]
+all = [
+    "weasyprint>=60.0",
+    "html2text>=2020.1.16",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["django_fancy_reports*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+django_fancy_reports = [
+    "templates/**/*",
+    "static/**/*",
+    "fixtures/*.json",
+]

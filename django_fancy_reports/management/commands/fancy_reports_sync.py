@@ -52,7 +52,6 @@ class Command(BaseCommand):
             if report_class.default_theme:
                 theme = ReportTheme.objects.filter(
                     name=report_class.default_theme,
-                    is_active=True
                 ).first()
                 if not theme:
                     self.stdout.write(

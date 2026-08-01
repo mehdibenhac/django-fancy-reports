@@ -91,7 +91,7 @@ class BaseReport(ABC):
 
         # If it's an ID, fetch from database
         if isinstance(theme_instance, int):
-            return ReportTheme.objects.filter(pk=theme_instance, is_active=True).first()
+            return ReportTheme.objects.filter(pk=theme_instance).first()
 
         # Try to get theme from Report model configuration
         if self.report_name:
@@ -106,13 +106,12 @@ class BaseReport(ABC):
         if self.theme:
             theme_obj = ReportTheme.objects.filter(
                 name=self.theme,
-                is_active=True
             ).first()
             if theme_obj:
                 return theme_obj
 
         # Fall back to default theme
-        return ReportTheme.objects.filter(is_default=True, is_active=True).first()
+        return ReportTheme.objects.filter(is_default=True).first()
 
     def _resolve_page_format(self, page_format_instance):
         """

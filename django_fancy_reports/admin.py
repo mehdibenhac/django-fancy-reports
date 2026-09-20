@@ -139,7 +139,7 @@ class ReportAdmin(admin.ModelAdmin):
         """Display compiled CSS preview"""
         css = obj.get_compiled_css()
         if not css:
-            return format_html('<em>No custom CSS</em>')
+            return format_html('<em>{}</em>', 'No custom CSS')
 
         return format_html(
             '<pre style="background:#f5f5f5;padding:10px;'
